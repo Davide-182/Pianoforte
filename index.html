@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Playable Piano JavaScript | DAC</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js" defer></script>
+  <script src="scale.js" defer></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h2>Playable PIANO</h2>
+      <div class="column volume-slider">
+        <span>Volume</span><input type="range" min="0" max="1" value="0.5" step="any">
+      </div>
+      <div class="column keys-checkbox">
+        <span>Show Keys</span><input type="checkbox" checked>
+      </div>
+    </header>
+    <div class="chord-display">
+      <h3>Accordo Riconosciuto:</h3>
+      <div id="chordName">Nessuno</div>
+    </div>
+    <div> 
+      <label class="chord-display" for="scaleSelect">Seleziona una scala:</label>
+      <select id="scaleSelect">
+        <!-- Scale maggiori -->
+        <option value="C Major">C Major</option>
+        <option value="C# Major">C# Major</option>
+        <option value="D Major">D Major</option>
+        <option value="D# Major">D# Major</option>
+        <option value="E Major">E Major</option>
+        <option value="F Major">F Major</option>
+        <option value="F# Major">F# Major</option>
+        <option value="G Major">G Major</option>
+        <option value="G# Major">G# Major</option>
+        <option value="A Major">A Major</option>
+        <option value="A# Major">A# Major</option>
+        <option value="B Major">B Major</option>
+        <!-- Scale minori naturali -->
+        <option value="C Minor">C Minor</option>
+        <option value="C# Minor">C# Minor</option>
+        <option value="D Minor">D Minor</option>
+        <option value="D# Minor">D# Minor</option>
+        <option value="E Minor">E Minor</option>
+        <option value="F Minor">F Minor</option>
+        <option value="F# Minor">F# Minor</option>
+        <option value="G Minor">G Minor</option>
+        <option value="G# Minor">G# Minor</option>
+        <option value="A Minor">A Minor</option>
+        <option value="A# Minor">A# Minor</option>
+        <option value="B Minor">B Minor</option>
+        <!-- Scale pentatoniche -->
+        <option value="C Pentatonic Major">C Pentatonic Major</option>
+        <option value="C# Pentatonic Major">C# Pentatonic Major</option>
+        <option value="D Pentatonic Major">D Pentatonic Major</option>
+        <option value="D# Pentatonic Major">D# Pentatonic Major</option>
+        <option value="E Pentatonic Major">E Pentatonic Major</option>
+        <option value="F Pentatonic Major">F Pentatonic Major</option>
+        <option value="F# Pentatonic Major">F# Pentatonic Major</option>
+        <option value="G Pentatonic Major">G Pentatonic Major</option>
+        <option value="G# Pentatonic Major">G# Pentatonic Major</option>
+        <option value="A Pentatonic Major">A Pentatonic Major</option>
+        <option value="A# Pentatonic Major">A# Pentatonic Major</option>
+        <option value="B Pentatonic Major">B Pentatonic Major</option>
+        <option value="C Pentatonic Minor">C Pentatonic Minor</option>
+        <option value="C# Pentatonic Minor">C# Pentatonic Minor</option>
+        <option value="D Pentatonic Minor">D Pentatonic Minor</option>
+        <option value="D# Pentatonic Minor">D# Pentatonic Minor</option>
+        <option value="E Pentatonic Minor">E Pentatonic Minor</option>
+        <option value="F Pentatonic Minor">F Pentatonic Minor</option>
+        <option value="F# Pentatonic Minor">F# Pentatonic Minor</option>
+        <option value="G Pentatonic Minor">G Pentatonic Minor</option>
+        <option value="G# Pentatonic Minor">G# Pentatonic Minor</option>
+        <option value="A Pentatonic Minor">A Pentatonic Minor</option>
+        <option value="A# Pentatonic Minor">A# Pentatonic Minor</option>
+        <option value="B Pentatonic Minor">B Pentatonic Minor</option>
+        <!-- Aggiungi altre scale qui -->
+      </select>
+      
+    </div>
+    <div class="chord-display" id="scaleNotesDisplay">Note della scala: </div>
+    
+    <ul class="piano-keys">
+      <li class="key white" data-key="a"><span>c</span></li>
+      <li class="key black" data-key="w"><span>C#</span></li>
+      <li class="key white" data-key="s"><span>D</span></li>
+      <li class="key black" data-key="e"><span>D#</span></li>
+      <li class="key white" data-key="d"><span>e</span></li>
+      <li class="key white" data-key="f"><span>F</span></li>
+      <li class="key black" data-key="t"><span>F#</span></li>
+      <li class="key white" data-key="g"><span>g</span></li>
+      <li class="key black" data-key="y"><span>G#</span></li>
+      <li class="key white" data-key="h"><span>A</span></li>
+      <li class="key black" data-key="u"><span>A#</span></li>
+      <li class="key white" data-key="j"><span>B</span></li>
+      <li class="key white" data-key="k"><span>C</span></li>
+      <li class="key black" data-key="o"><span>C#</span></li>
+      <li class="key white" data-key="l"><span>D</span></li>
+      <li class="key black" data-key="p"><span>D#</span></li>
+      <li class="key white" data-key="ò"><span>E</span></li>
+    </ul>
+  </div>
+  <!-- Riquadro laterale -->
+  <!-- Riquadro laterale -->
+<!-- Al di fuori della div "wrapper" principale, crea una nuova "wrapper" per il sidebar -->
+<div class="wrapper">
+  <div class="chord-display">
+    <h3>Progressioni Accordi</h3>
+    <div id="chordProgressions">
+      <!-- Le progressioni di accordi verranno inserite qui via JavaScript -->
+      <p>Seleziona una scala per visualizzare le progressioni di accordi.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
